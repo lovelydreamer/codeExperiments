@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+    div {
+        color: purple;
+    }
+    </style>
+    <title> While Loops </title>
+</head>
+
+<body>
+    <div id="target">
+    </div>
+    <script>
+    var n = 1,
+        sum = 0;
+
+    while (n <= 10) {
+        sum = sum + n;
+        n++;
+    }
+
+    document.querySelector("#target").innerHTML =
+        ("The product of the numbers 1 through " + (n - 1) + " is " + sum);
+    </script>
+</body>
+
+</html>

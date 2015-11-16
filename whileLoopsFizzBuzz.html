@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Fizz Buzz</title>
+</head>
+
+<body>
+    <h2> Coding is cool</h2>
+    <div>
+        <p> And FizzBuzz is my jam. And I am using textContent to place this in the div above.</p>
+        <div class="Fizz"> </div>
+        <div class="Buzz"> </div>
+        <div class="FizzBuzz"> </div>
+    </div>
+    <script>
+    //Using While loops - write a problem that logs num 1 -100.
+    // For % 3 === 0 && %5 === 0 print FizzBuzz
+    // For % 3 === 0, print Fizz
+    // For % 5 === 0, print Buzz
+    // Use textContent to place in a div
+
+    var i = 0;
+    while (i < 100) {
+        i = i + 1;
+
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("Fizz");
+        } else if (i % 5 === 0) {
+            console.log("Buzz");
+        } else {
+            console.log(i);
+        }
+    }
+    </script>
+</body>
+
+</html>

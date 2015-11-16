@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Fizz Buzz</title>
+    <style>
+    .fizz {
+        color: red;
+    }
+    
+    .buzz {
+        color: blue;
+    }
+    
+    .fizzbuzz {
+        color: pink;
+    }
+    </style>
+    <title> Fizz Buzz Refactored w/ inner HTML</title>
+</head>
+
+<body>
+    <h2> Coding is cool</h2>
+    <div id="target">
+    </div>
+    <script>
+    var i = 1;
+    var string = "";
+
+    while (i <= 100) {
+
+        if (i % 3 === 0 && i % 5 !== 0) {
+            string += '<p class="fizz">fizz</p>';
+        } else if (i % 3 !== 0 && i % 5 === 0) {
+            string += '<p class="buzz">buzz</p>';
+
+        } else if (i % 3 === 0 && i % 5 === 0) {
+            string += '<p class="fizzbuzz">fizzbuzz</p>';
+        } else {
+            string += '<p>' + i + '</p>';
+        }
+        i++;
+    }
+    document.querySelector('#target').innerHTML += string;
+    </script>
+</body>
+
+</html>
