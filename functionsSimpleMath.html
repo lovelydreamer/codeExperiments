@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Math</title>
+</head>
+
+<body>
+    <div id="output">
+        <h3 class="span">
+        </h3>
+    </div>
+    <script>
+    var tripler = function(x) {
+        return x * 3;
+    };
+
+    var multiply = function(x, y) {
+        return x * y;
+    };
+
+    var divide = function(x, y) {
+        return x / y;
+    };
+
+    var remainder = function(x, y) {
+        return x % y;
+    };
+
+    // Using only the functions you wrote above, and no operators, calculate
+    // the value of tripling 5, multiplying that by 12, dividing by 2 and then
+    // finding the remainder of dividing that by 3. 
+
+    var result = remainder(divide(multiply(tripler(5), 12), 2), 3);
+    console.log(result);
+    </script>
+</body>
+
+</html>

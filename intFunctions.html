@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Random Background</title>
+</head>
+<style>
+body {
+    font: 600, oblique, normal, 150%/1.5, Georgia;
+    text-align: center;
+}
+</style>
+
+<body>
+    <h1>Welcome to my page Experiment</h1>
+    <h3>Click the Button for a randomly generated Background Color</h3>
+    <h4>How exciting is that?</h4>
+    <p id="target"> can haz moar sleep plz
+        <br>
+    </p>
+    <button id="button">Click Here</button>
+    <div id="output"> I think..</div>
+    <div id="here">my alarm clock is evil. click here...</div>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+    // beep button and background-color change
+    var beeper = function() {
+        console.log(' ');
+
+    };
+
+    document.querySelector('#button').addEventListener('click', function() {
+        // console.log('beep');
+        $('#target').append('beep');
+        $('body').css('background-color', randomColor);
+    });
+    var randomColor = '#' + Math.random().toString(16).slice(2, 8);
+
+    // shortcut
+    $('#here').click(function() {
+        $('#here').append().css('color', 'red').text('boom goes the dynamite!');
+    });
+    </script>
+</body>
