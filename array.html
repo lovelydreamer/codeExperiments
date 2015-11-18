@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bucket List Array</title>
+</head>
+
+<body>
+    <h1>So many things, such little time:</h1>
+    <div id="bucketList">
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+    // Bucket List
+    var bucket_list = [];
+    bucket_list[0] = "Buy a home.";
+    bucket_list[1] = "Write a book.";
+
+    bucket_list.push("Move to the country.");
+    bucket_list.push("Learn to dance.");
+    bucket_list.unshift("Become a Full Stack Developer.");
+    bucket_list.unshift("Learn JavaScript.");
+
+    var dying_wish = bucket_list.pop();
+    var doItToday = bucket_list.shift();
+
+    //append to the webpage w/jQuery
+    var append_strings = function(array, selector) {
+        var i = 0;
+        while (i < array.length) {
+            $(selector).append(array[i]);
+            i++;
+        }
+    };
+    append_strings(bucket_list, '#bucketList');
+    </script>
+</body>
+
+</html>
