@@ -23,9 +23,9 @@ array_combiner(friends, enemies);
 
 var tomHanksFilms = ["Forrest Gump", "Sleepless in Seattle", "Road to Perdition", "Toy Story 3", "Apollo 13", "Saving Private Ryan", "Philadelphia"];
 var array_plucker = function(array, index) {
-    var removed_value = array.splice(index,1);
+    var removed_value = array.splice(index, 1);
     return removed_value;
 };
 
 var noAcademyAward = array_plucker(tomHanksFilms, 1);
-console.log("Those so many awards. Which one was great but no Academy Award? Answer: "+noAcademyAward);
+console.log("Those so many awards. Which one was great but no Academy Award? Answer: " + noAcademyAward);
