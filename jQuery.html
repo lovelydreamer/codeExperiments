@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Itsy Bitsy Spider</title>
+</head>
+<style>
+body {
+    background-color: #B0C4DE;
+    font: 600, oblique, normal, 100%/1.5, Georgia;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+</style>
+
+<body>
+    <h1>The itsy-bitsy spider</h1>
+    <div id="firstStanza">
+        <ul>
+            <li>Climbed up the water spout</li>
+            <li class="turnBlu">Down came the rain</li>
+            <li class="turnBlu">And washed the spider out</li>
+        </ul>
+    </div>
+    <div id="secondStanza">
+        <ul>
+            <li>Out came the sun</li>
+            <li>And dried up all the rain</li>
+        </ul>
+    </div>
+    <div id="thirdStanza">
+        <ul>
+            <li>And the itsy-bitsy spider</li>
+            <li>Climbed up the spout again</li>
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+    //heading color
+    $('h1').css({
+        'color': 'blue',
+        'background-color': 'blanchedalmond'
+    });
+
+    $('#firstStanza').css({
+        'color': 'grey'
+    }).fadeOut(7500);
+
+    //hide blue section
+    $('.turnBlu').css({
+        'color': 'blue'
+    }).fadeOut(8000);
+
+    //reveal yellow section
+    $('#secondStanza').fadeOut(5000);
+    $('#secondStanza').fadeOut(6000);
+
+    //initially hidden yellow section (ordering matters b/t #secret & .toYellow)
+    $('#secondStanza').hide();
+    $('#secondStanza').fadeIn().css({
+        'background-color': 'yellow'
+    });
+    $('#secondStanza').slideUp(9000);
+
+    //ending to reveal
+    $('#thirdStanza').hide();
+    $('#thirdStanza').fadeIn(8000);
+    </script>
+</body>
+
+</html>
