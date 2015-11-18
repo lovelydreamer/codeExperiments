@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Magic 8-Ball</title>
+</head>
+<style>
+body, h1, h2, {
+	margin: 0;
+}
+
+#intro{
+	color: #A7A37E;
+	padding: 10px;
+	background-color: #EFECCA;
+}
+
+span:first-child{
+	color: #0582A8;
+}
+
+body {
+	background-color: #0582A8;
+    font:normal 1.5em/1em "times new roman", serif;
+    text-align: center;
+}
+#answer {
+	background-color: #046987;
+	border-radius: 3px 3px;
+	display: inline;
+	font-variant: small-caps;
+}
+</style>
+<header>
+	<div id="intro">
+		<h1>Welcome to the <span>Magic 8-Ball</span></h1>
+		<h2>Concentrate hard on your inquiry.</h2>
+	</div>
+</header>
+<body>
+	<button>ask question</button>
+		<h3>Your answer awaits:</h3>
+		<div id="answer"></div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+ </script>
+    <script>
+
+
+var bizarreArray = ["Ask another day.", "Is the sky blue?","The sun shines on your fortune.","Be cautious.","Hazy, ask again later.", "Sorry, I'm on a break.", "But of course!", "Try again later.", "YES!", "Nope."];
+
+var currentAnswer = bizarreArray.slice();
+var eightBall = function() {
+  if (currentAnswer.length === 0) {
+    currentAnswer = bizarreArray.slice();
+  }
+  return currentAnswer.splice(Math.floor(Math.random() * currentAnswer.length), 1);
+};
+
+
+document.querySelector('button').addEventListener('click', function(){
+	$('#answer').append().css('color', 'orange').text(eightBall());
+}
+);
+
+
+// Create a Magic 8-ball:
+// 1. user to type a question into an input field.
+// 2. When the user clicks the "ask question" button, register a click handler function -
+// randomly selects a reply fromn array of appropriately vague stock phrases.
+
+// 3. Display the answer inside a glowing circle or something crazy like that.
+// 4. Allow user to click an "ask again" button which clears their previous question and output.
+// 5. Refactor your code so that the user doesn't receive the same reply twice until
+//  all the replies have been used at least once.
+</script>
+</body>
+</html>
